@@ -11,3 +11,5 @@
   Interface ve abstract sınıflar( final ve const kavramları, immutable sınıf oluşturma) üzerine uygumalar yapıldı.
   <h2>Staj6 02.07.2022</h2>
   Asenkron programlama, future yapısı, then, catchError, when Complete metotlarına çalışılıp örnek uygulamalar yapıldı.
+  <h2>Staj7 03.07.2022</h2>
+  Temel Flutter widgetlarına(MaterialApp, Scaffold, FloatingActionButton, Container, Alignment Margin, Padding, Center, Border, Row, Column) çalışıldı.
