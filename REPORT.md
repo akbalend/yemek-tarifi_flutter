@@ -15,3 +15,5 @@
   Temel Flutter widgetlarına(MaterialApp, Scaffold, FloatingActionButton, Container, Alignment Margin, Padding, Center, Border, Row, Column) çalışıldı.
   <h2>Staj8 05.07.2022</h2>
   Bir önceki gün öğrenilen flutter widgetları VSCode üzerinde örnek yemek tarifleri projesine eklenip uygulamaları yapıldı.
+
+  
