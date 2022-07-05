@@ -1,43 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_yemek_tarifi/101/app_bar_learn.dart';
+import 'package:flutter_yemek_tarifi/101/button_learn.dart';
+import 'package:flutter_yemek_tarifi/101/container_sized_box_learn.dart';
+import 'package:flutter_yemek_tarifi/101/icon_learn.dart';
+import 'package:flutter_yemek_tarifi/101/scaffold_learn.dart';
+import 'package:flutter_yemek_tarifi/101/text_learn.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  static const String _title = 'Flutter Code Sample';
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: _title,
-      home: MyStatelessWidget(),
-    );
-  }
-}
-
-class MyStatelessWidget extends StatelessWidget {
-  const MyStatelessWidget({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final ButtonStyle style =
-        TextButton.styleFrom(primary: Theme.of(context).colorScheme.onPrimary);
-    return Scaffold(
-      appBar: AppBar(
-        actions: <Widget>[
-          TextButton(
-            style: style,
-            onPressed: () {},
-            child: const Text('Action 1'),
-          ),
-          TextButton(
-            style: style,
-            onPressed: () {},
-            child: const Text('Action 2'),
-          )
-        ],
+    return MaterialApp(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme:ThemeData.dark().copyWith(
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+          systemOverlayStyle: SystemUiOverlayStyle.light,
+          backgroundColor: Colors.red,
+          elevation: 0,
+        )
       ),
+      home: IconLearnView(),
     );
   }
 }
+
