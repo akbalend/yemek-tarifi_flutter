@@ -15,5 +15,16 @@
   Temel Flutter widgetlarına(MaterialApp, Scaffold, FloatingActionButton, Container, Alignment Margin, Padding, Center, Border, Row, Column) çalışıldı.
   <h2>Staj8 05.07.2022</h2>
   Bir önceki gün öğrenilen flutter widgetları VSCode üzerinde örnek yemek tarifleri projesine eklenip uygulamaları yapıldı.
-
+  <h2>Staj9 06.07.2022</h2>
+  Flutterda image, Animated, OOP(object oriented program), StateManage, Text Form Field kavramlarına çalışıldı.
+  <h2>Staj10 07.07.2022</h2>
+  Bugün pubdev paketlerine, paketlerin kullanımına, TextField, enum-extension ilişkisi, model ve model çetşitlerine çalışıldı.
+  <h2>Staj11 08.07.2022</h2>
+  Flutter üzerinde CustomButton, Dropdown, Part Partof, Callback kavramlarıyla ilgili örnek projeler araştırılıp kendi örnek uygulamaları yapıldı.
+  <h2>Staj12 13.07.2022</h2>
+  Bugün github üzerinde örnek yemek tarifi uygulamaları araştırılıp öğrenilen kavramların projelerde nasıl kullanıldıkları incelendi.
+  <h2>Staj13 14.07.2022</h2>
+  Flutter üzerinde cache katmanı, caching, jsonEncode, Generic, compute kavramlarına örneklerle çalışıldı.
+  <h2>Staj14 15.07.2022</h2>
+  Yemek tarifleri projesinin ana ekran tasarımı ve içerikleri düzenlendi.
   
