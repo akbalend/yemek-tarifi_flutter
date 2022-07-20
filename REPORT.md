@@ -27,4 +27,35 @@
   Flutter üzerinde cache katmanı, caching, jsonEncode, Generic, compute kavramlarına örneklerle çalışıldı.
   <h2>Staj14 15.07.2022</h2>
   Yemek tarifleri projesinin ana ekran tasarımı ve içerikleri düzenlendi.
+  <h2>Staj15 16.07.2022</h2>
+
+  <h2>Staj16 18.07.2022</h2>
+
+  <h2>Staj17 19.07.2022</h2>
+
+  <h2>Staj18 20.07.2022</h2>
+
+  <h2>Staj19 21.07.2022</h2>
+
+  <h2>Staj20 22.07.2022</h2>
+
+  <h2>Staj21 23.07.2022</h2>
+
+  <h2>Staj22 25.07.2022</h2>
+
+  <h2>Staj23 26.07.2022</h2>
+
+  <h2>Staj24 27.07.2022</h2>
+
+  <h2>Staj25 28.07.2022</h2>
+
+  <h2>Staj26 29.07.2022</h2>
+
+  <h2>Staj27 30.07.2022</h2>
+
+  <h2>Staj28 01.08.2022</h2>
+
+  <h2>Staj29 02.08.2022</h2>
+
+  <h2>Staj30 03.08.2022</h2>
   
