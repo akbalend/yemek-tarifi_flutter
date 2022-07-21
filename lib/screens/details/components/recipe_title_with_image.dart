@@ -18,28 +18,17 @@ class RecipeTitleWithImage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            "Tavuk Sote Tarifi",
-            style: TextStyle(color: Colors.white),
-          ),
-          Text(
-            recipes.title,
-            style: Theme.of(context).textTheme.headline4!.copyWith(
-                color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-          //SizedBox(height: kDefaultPaddin),
           Row(
             children: [
               RichText(
                 text: TextSpan(
                   children: [
-                    TextSpan(text: ("\n")),
                     TextSpan(
                       text: recipes.size,
                       style: Theme.of(context)
                           .textTheme
                           .headline5!
-                          .copyWith(color: Colors.white),
+                          .copyWith(color: Colors.white), 
                     ),
                   ],
                 ),
@@ -47,7 +36,7 @@ class RecipeTitleWithImage extends StatelessWidget {
               SizedBox(width: kDefaultPaddin),
               Expanded(
                 child: Image.asset(recipes.image,
-                fit: BoxFit.fill,
+                fit: BoxFit.fill
                 ),
               ),
             ],

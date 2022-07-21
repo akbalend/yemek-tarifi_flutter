@@ -19,6 +19,10 @@ class Body extends StatelessWidget {
               children: [
                 Container(
                   margin: EdgeInsets.only(top: size.height * 0.3),
+                  padding: EdgeInsets.only(
+                      top: size.height * 0.05,
+                      left: kDefaultPaddin,
+                      right: kDefaultPaddin),
                   height: 500,
                   decoration: const BoxDecoration(
                     color: Colors.white,
@@ -27,7 +31,20 @@ class Body extends StatelessWidget {
                       topRight: Radius.circular(24),
                     ),
                   ),
-                  
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Tarifi:",style: Theme.of(context)
+                          .textTheme
+                          .headline6!,
+
+                          ),
+                      Text(
+                        recipes.description,
+                        style: const TextStyle(height: 1.5),
+                      ),
+                    ],
+                  ),
                 ),
                 RecipeTitleWithImage(recipes: recipes)
               ],
@@ -38,4 +55,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-

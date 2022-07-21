@@ -19,16 +19,13 @@ class ItemFood extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-          padding: const EdgeInsets.all(kDefaultPaddin),
-         // height: 180,
-         // width: 160,
+          padding: const EdgeInsets.all(kDefaultPaddin /2),
+          
           decoration: BoxDecoration(
             color: Colors.grey[300],
             borderRadius: BorderRadius.circular(16),
           ),
-          child: Image.asset(recipes!.image),
-    
-          
+          child: Image.asset(recipes!.image), 
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),

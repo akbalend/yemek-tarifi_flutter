@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme:ThemeData.light().copyWith(
         appBarTheme: const AppBarTheme(
-          centerTitle: true,
+          backgroundColor: Colors.transparent,
+          centerTitle: false,
           systemOverlayStyle: SystemUiOverlayStyle.light,
           elevation: 0,
         )

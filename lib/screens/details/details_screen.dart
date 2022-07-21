@@ -19,6 +19,7 @@ class DetailsScreen extends StatelessWidget {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
+      title: Text(recipes.title),
       elevation: 0,
       leading: IconButton(
         icon: SvgPicture.asset('assets/icons/back.svg',
