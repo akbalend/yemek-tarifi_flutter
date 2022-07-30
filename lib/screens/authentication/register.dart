@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_yemek_tarifi/screens/home/homeScreen.dart';
-import 'package:flutter_yemek_tarifi/services/auth.dart';
 import '../../widget.dart';
 
 class register extends StatefulWidget {
@@ -18,28 +17,28 @@ class _registerState extends State<register> {
   bool isLoading = false;
   
 
-  AuthMethods authMethods = new AuthMethods();
+  //AuthMethods authMethods = new AuthMethods();
 
   final formKey = GlobalKey<FormState>();
   TextEditingController userNameTextEditingController = new TextEditingController();
   TextEditingController emailTextEditingController = new TextEditingController();
   TextEditingController passwordTextEditingController = new TextEditingController();
 
-  signMeUp(){
-    if(formKey.currentState!.validate()){
-      setState(() {
-        isLoading = true;
-      });
+  // signMeUp(){
+  //   if(formKey.currentState!.validate()){
+  //     setState(() {
+  //       isLoading = true;
+  //     });
 
-      AuthMethods.signUpwithEmailAndPassword(emailTextEditingController.text, 
-          passwordTextEditingController.text).then((val){
-            //print("${val.uid}");
-      Navigator.pushReplacement(context, MaterialPageRoute(
-          builder: (context) => homeScreen()
-          ));
-      });
-    }
-  }
+  //     AuthMethods.signUpwithEmailAndPassword(emailTextEditingController.text, 
+  //         passwordTextEditingController.text).then((val){
+  //           //print("${val.uid}");
+  //     Navigator.pushReplacement(context, MaterialPageRoute(
+  //         builder: (context) => homeScreen()
+  //         ));
+  //     });
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +111,7 @@ class _registerState extends State<register> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    signMeUp();
+                  //  signMeUp();
                   },
                   child: Container(
                     alignment: Alignment.center,
