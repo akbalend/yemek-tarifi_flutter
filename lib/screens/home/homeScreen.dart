@@ -32,7 +32,7 @@ class homeScreen extends StatelessWidget {
             IconButton(
             onPressed: () {},
             icon: const Icon(
-              Icons.favorite,
+              Icons.exit_to_app,
               color: kTextColor,
             )),
             const SizedBox(width: kDefaultPaddin /2,)

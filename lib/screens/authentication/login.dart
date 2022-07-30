@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_yemek_tarifi/widget.dart';
 
 class logIn extends StatefulWidget {
-  logIn({Key? key}) : super(key: key);
+  final Function toggle;
+  logIn(this.toggle);
+  
+ // logIn(void Function() toggleView, {Key? key}) : super(key: key);
 
   @override
   State<logIn> createState() => _logInState();
@@ -88,11 +91,19 @@ class _logInState extends State<logIn> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Hesabınız yok mu? ",style: mediumTextStyle(),),
-                    Text("Kayıt ol",style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 17,
-                      decoration: TextDecoration.underline
-                    ),),
+                    GestureDetector(
+                      onTap: () {
+                        widget.toggle();
+                      },
+                      child: Container(
+                        padding: EdgeInsets.symmetric(vertical: 8),
+                        child: Text("Kayıt ol",style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 17,
+                          decoration: TextDecoration.underline
+                        ),),
+                      ),
+                    ),
                   ],
                 ),
                 SizedBox(height: 50,)
