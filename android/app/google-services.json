@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "622096366862",
+    "project_id": "yemek-tarifi-flutter",
+    "storage_bucket": "yemek-tarifi-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622096366862:android:2cfe0bd8c19e8e667ceb5f",
+        "android_client_info": {
+          "package_name": "com.example.flutter_yemek_tarifi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622096366862-a5fbhf24ofqe23u0e1mv7fc6s7vi62mj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe6bLjYhNqE-ljq_kr3CwkA8BilK02ZS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622096366862-a5fbhf24ofqe23u0e1mv7fc6s7vi62mj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

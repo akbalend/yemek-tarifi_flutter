@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_yemek_tarifi/screens/authentication/login.dart';
+import 'package:flutter_yemek_tarifi/screens/authentication/register.dart';
 import 'package:flutter_yemek_tarifi/screens/home/homeScreen.dart';
 
 
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         )
       ),
-      home: const homeScreen(),
+      home: register(),
     );
   }
 }
