@@ -3,8 +3,8 @@ import 'package:flutter_yemek_tarifi/screens/home/homeScreen.dart';
 import '../../widget.dart';
 
 class register extends StatefulWidget {
-  final Function toggle;
-  register(this.toggle);
+//  final Function toggle;
+ // register(this.toggle);
 
   //register(void Function() toggleView, {Key? key}) : super(key: key);
 
@@ -151,7 +151,7 @@ class _registerState extends State<register> {
                     Text("Hesabınız var mı? ",style: mediumTextStyle(),),
                     GestureDetector(
                         onTap: () {
-                        widget.toggle();
+                        //widget.toggle();
                       },
                       child: Container(
                         padding: EdgeInsets.symmetric(vertical: 8),

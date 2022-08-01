@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_yemek_tarifi/widget.dart';
 
 class logIn extends StatefulWidget {
-  final Function toggle;
-  logIn(this.toggle);
+  //final Function toggle;
+ // logIn(this.toggle);
   
  // logIn(void Function() toggleView, {Key? key}) : super(key: key);
 
@@ -93,7 +93,7 @@ class _logInState extends State<logIn> {
                     Text("Hesabınız yok mu? ",style: mediumTextStyle(),),
                     GestureDetector(
                       onTap: () {
-                        widget.toggle();
+                       // widget.toggle();
                       },
                       child: Container(
                         padding: EdgeInsets.symmetric(vertical: 8),
