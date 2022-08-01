@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_yemek_tarifi/screens/authentication/auth.dart';
 import 'package:flutter_yemek_tarifi/screens/home/homeScreen.dart';
 import '../../widget.dart';
 
@@ -17,28 +18,25 @@ class _registerState extends State<register> {
   bool isLoading = false;
   
 
-  //AuthMethods authMethods = new AuthMethods();
+  AuthService authService = new AuthService();
 
   final formKey = GlobalKey<FormState>();
   TextEditingController userNameTextEditingController = new TextEditingController();
   TextEditingController emailTextEditingController = new TextEditingController();
   TextEditingController passwordTextEditingController = new TextEditingController();
 
-  // signMeUp(){
-  //   if(formKey.currentState!.validate()){
-  //     setState(() {
-  //       isLoading = true;
-  //     });
+  signUp(){
+    if(formKey.currentState!.validate()){
+      setState(() {
+        isLoading = true;
+      });
+      
+    }
+  }
 
-  //     AuthMethods.signUpwithEmailAndPassword(emailTextEditingController.text, 
-  //         passwordTextEditingController.text).then((val){
-  //           //print("${val.uid}");
-  //     Navigator.pushReplacement(context, MaterialPageRoute(
-  //         builder: (context) => homeScreen()
-  //         ));
-  //     });
-  //   }
-  // }
+
+
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +73,7 @@ class _registerState extends State<register> {
                   TextFormField(
                     validator: (val){
                       return RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(val!) ?
-                          null : "Enter correct email"; 
+                          null : "Eposta adresi giriniz"; 
                     },
                     controller: emailTextEditingController,
                     style: simpleTextStyle(),
@@ -111,7 +109,7 @@ class _registerState extends State<register> {
                 ),
                 GestureDetector(
                   onTap: () {
-                  //  signMeUp();
+                  signUp();
                   },
                   child: Container(
                     alignment: Alignment.center,
@@ -151,7 +149,7 @@ class _registerState extends State<register> {
                     Text("Hesabınız var mı? ",style: mediumTextStyle(),),
                     GestureDetector(
                         onTap: () {
-                        //widget.toggle();
+                        widget.toggle();
                       },
                       child: Container(
                         padding: EdgeInsets.symmetric(vertical: 8),
