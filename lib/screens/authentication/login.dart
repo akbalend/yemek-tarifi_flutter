@@ -34,14 +34,29 @@ class _logInState extends State<logIn> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                TextField(
-                  style: simpleTextStyle(),
-                  decoration: textFieldInputDecoration("email"),
-                ),
-                TextField(
-                  style: simpleTextStyle(),
-                  decoration: textFieldInputDecoration("password"),
-                ),
+                TextFormField(
+                          validator: (val) {
+                            return RegExp(
+                                        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                                    .hasMatch(val!)
+                                ? null
+                                : "Please Enter Correct Email";
+                          },
+                          controller: emailTextEditingController,
+                          style: simpleTextStyle(),
+                          decoration: textFieldInputDecoration("email"),
+                        ),
+                TextFormField(
+                          obscureText: true,
+                          validator: (val) {
+                            return val!.length > 6
+                                ? null
+                                : "En az 6 haneli şifre giriniz";
+                          },
+                          style: simpleTextStyle(),
+                          controller: passwordTextEditingController,
+                          decoration: textFieldInputDecoration("password"),
+                        ),
                 SizedBox(
                   height: 8,
                 ),
