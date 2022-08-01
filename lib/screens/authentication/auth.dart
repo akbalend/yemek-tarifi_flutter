@@ -1,36 +1,28 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_yemek_tarifi/models/user.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AuthService{
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  User? _userFromFirebaseUser(FirebaseUser user) {
-    return user != null ? User(userId: user.uid) : null;
+  Future<User?> signIn(String email, String password) async {
+    var user = await _auth.signInWithEmailAndPassword(
+        email: email, password: password);
+    return user.user;
+  }
+   Future<User?> createPerson(String name, String email, String password) async {
+    var user = await _auth.createUserWithEmailAndPassword(
+        email: email, password: password);
+
+    await _firestore
+        .collection("Person")
+        .doc(user.user!.uid)
+        .set({'userName': name, 'email': email});
+
+    return user.user;
   }
 
- Future signInWithEmailAndPassword(String email, String password) async {
-    try {
-      AuthResult result = await _auth.signInWithEmailAndPassword(
-          email: email, password: password);
-      FirebaseUser user = result.user;
-      return _userFromFirebaseUser(user);
-    } catch (e) {
-      print(e.toString());
-      return null;
-    }
-  }
-   Future signUpWithEmailAndPassword(String email, String password) async {
-    try {
-      AuthResult result = await _auth.createUserWithEmailAndPassword(
-          email: email, password: password);
-      FirebaseUser user = result.user;
-      return _userFromFirebaseUser(user);
-    } catch (e) {
-      print(e.toString());
-      return null;
-    }
-  }
   Future resetPass(String email) async {
     try {
       return await _auth.sendPasswordResetEmail(email: email);
