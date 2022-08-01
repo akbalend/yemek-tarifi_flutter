@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:622096366862:android:2cfe0bd8c19e8e667ceb5f",
+        "mobilesdk_app_id": "1:622096366862:android:610d64e0f9d7ee707ceb5f",
         "android_client_info": {
-          "package_name": "com.example.flutter_yemek_tarifi"
+          "package_name": "com.example.yemek_tarifi_flutter"
         }
       },
       "oauth_client": [
