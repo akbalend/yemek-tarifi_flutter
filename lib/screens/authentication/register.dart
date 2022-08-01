@@ -5,10 +5,10 @@ import 'package:flutter_yemek_tarifi/screens/home/homeScreen.dart';
 import '../../widget.dart';
 
 class register extends StatefulWidget {
-  final Function toggle;
-  register(this.toggle);
+//  final Function toggle;
+//  register(this.toggle);
 
-  //register(void Function() toggleView, {Key? key}) : super(key: key);
+ register(void Function() toggleView, {Key? key}) : super(key: key);
 
   @override
   State<register> createState() => _registerState();
@@ -160,7 +160,11 @@ class _registerState extends State<register> {
                     Text("Hesabınız var mı? ",style: mediumTextStyle(),),
                     GestureDetector(
                         onTap: () {
-                        widget.toggle();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => logIn(   
+                              )));
                       },
                       child: Container(
                         padding: EdgeInsets.symmetric(vertical: 8),

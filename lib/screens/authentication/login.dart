@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_yemek_tarifi/screens/authentication/auth.dart';
+import 'package:flutter_yemek_tarifi/screens/authentication/register.dart';
+import 'package:flutter_yemek_tarifi/screens/home/homeScreen.dart';
 import 'package:flutter_yemek_tarifi/widget.dart';
 
 class logIn extends StatefulWidget {
-  final Function toggle;
-  logIn(this.toggle);
-  
-   AuthService _authService = AuthService();
- // logIn(void Function() toggleView, {Key? key}) : super(key: key);
 
   @override
   State<logIn> createState() => _logInState();
@@ -15,6 +12,9 @@ class logIn extends StatefulWidget {
 
 class _logInState extends State<logIn> {
 
+  TextEditingController emailTextEditingController = new TextEditingController();
+  TextEditingController passwordTextEditingController = new TextEditingController();
+  AuthService authService = new AuthService();
   
   @override
   Widget build(BuildContext context) {
@@ -56,23 +56,38 @@ class _logInState extends State<logIn> {
                   ),
                 ),
                 SizedBox(
-                  height: 8,
+                  height: 16,
                 ),
-                Container(
-                  alignment: Alignment.center,
-                  width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.symmetric(vertical: 20),
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(colors: [
-                        const Color(0xff007EF4),
-                        const Color(0xff2A75BC)
-                      ]),
-                      borderRadius: BorderRadius.circular(27)),
+                     InkWell(
+                    onTap: () {
+                    authService
+                          .signIn(
+                              emailTextEditingController.text, passwordTextEditingController.text)
+                          .then((value) {
+                        return Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => homeScreen()));
+                      });
+                    }, 
+                    child: Container(
+                      padding: EdgeInsets.symmetric(vertical: 16),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          gradient: LinearGradient(
+                            colors: [
+                              const Color(0xff007EF4),
+                              const Color(0xff2A75BC)
+                            ],
+                          )),
+                      width: MediaQuery.of(context).size.width,
                   child: Text(
                     "Giriş Yap",
                     style: mediumTextStyle(),
+                    textAlign: TextAlign.center,
                   ),
                 ),
+              ),
                 SizedBox(
                   height: 16,
                 ),
@@ -93,10 +108,14 @@ class _logInState extends State<logIn> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Hesabınız yok mu? ",style: mediumTextStyle(),),
-                    GestureDetector(
+                    InkWell(
                       onTap: () {
-                        widget.toggle();
-                      },
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => register(() {   
+                              },)));
+                  },
                       child: Container(
                         padding: EdgeInsets.symmetric(vertical: 8),
                         child: Text("Kayıt ol",style: TextStyle(
