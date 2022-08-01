@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_yemek_tarifi/screens/authentication/authenticate.dart';
@@ -6,8 +7,10 @@ import 'package:flutter_yemek_tarifi/screens/authentication/register.dart';
 import 'package:flutter_yemek_tarifi/screens/home/homeScreen.dart';
 
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

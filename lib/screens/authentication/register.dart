@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_yemek_tarifi/screens/authentication/auth.dart';
+import 'package:flutter_yemek_tarifi/screens/authentication/login.dart';
 import 'package:flutter_yemek_tarifi/screens/home/homeScreen.dart';
 import '../../widget.dart';
 
@@ -107,10 +108,20 @@ class _registerState extends State<register> {
                 SizedBox(
                   height: 8,
                 ),
-                GestureDetector(
+                InkWell(
                   onTap: () {
-                  signUp();
-                  },
+                          authService
+                              .createPerson(
+                                  userNameTextEditingController.text,
+                                  emailTextEditingController.text,
+                                  passwordTextEditingController.text)
+                              .then((value) {
+                            return Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => homeScreen()));
+                          });
+                        },
                   child: Container(
                     alignment: Alignment.center,
                     width: MediaQuery.of(context).size.width,

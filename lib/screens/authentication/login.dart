@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_yemek_tarifi/screens/authentication/auth.dart';
 import 'package:flutter_yemek_tarifi/widget.dart';
 
 class logIn extends StatefulWidget {
   final Function toggle;
   logIn(this.toggle);
   
+   AuthService _authService = AuthService();
  // logIn(void Function() toggleView, {Key? key}) : super(key: key);
 
   @override
