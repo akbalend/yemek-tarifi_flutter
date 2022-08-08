@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:622096366862:android:ada1ab3d5ace2cd57ceb5f",
+        "mobilesdk_app_id": "1:622096366862:android:7cfe4783aa40e4e17ceb5f",
         "android_client_info": {
-          "package_name": "com.example.flutter_yemek_tarifi"
+          "package_name": "com.example.yemek_tarifi_flutter"
         }
       },
       "oauth_client": [
@@ -29,6 +29,13 @@
             {
               "client_id": "622096366862-a5fbhf24ofqe23u0e1mv7fc6s7vi62mj.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "622096366862-tijebtc1m7jf4pjd5hrorodf14g0ikhk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterYemekTarifi"
+              }
             }
           ]
         }
