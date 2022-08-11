@@ -1,16 +1,32 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_yemek_tarifi/constants.dart';
+import 'package:flutter_yemek_tarifi/screens/camera/cameraScreen.dart';
 import 'package:flutter_yemek_tarifi/screens/home/components/body.dart';
 
+// ignore: camel_case_types
 class homeScreen extends StatelessWidget {
-  const homeScreen({Key? key}) : super(key: key);
+  final List<CameraDescription> cameras;
+  const homeScreen({Key? key, required this.cameras}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: Body()
+      body: const Body(),
+        floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) =>  CameraScreen(cameras: cameras),
+            ));
+            },
+            backgroundColor: Colors.red.shade400,
+            hoverColor: Colors.blue,
+            child: Icon(Icons.camera, color: Colors.grey.shade900),
+          ),
       );
   }
 

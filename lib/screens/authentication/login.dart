@@ -82,7 +82,7 @@ class _logInState extends State<logIn> {
                         return Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => homeScreen()));
+                                builder: (context) => homeScreen(cameras: [],)));
                       });
                     }, 
                     child: Container(

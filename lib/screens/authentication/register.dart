@@ -117,7 +117,7 @@ class _registerState extends State<register> {
                             return Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => homeScreen()));
+                                    builder: (context) => homeScreen(cameras: [],)));
                           });
                         },
                   child: Container(
