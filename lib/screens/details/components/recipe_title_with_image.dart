@@ -33,7 +33,7 @@ class RecipeTitleWithImage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(width: kDefaultPaddin),
+              const SizedBox(width: kDefaultPaddin),
               Expanded(
                 child: Image.asset(recipes.image,
                 fit: BoxFit.fill

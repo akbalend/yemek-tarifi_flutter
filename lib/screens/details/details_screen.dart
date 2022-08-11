@@ -32,7 +32,7 @@ class DetailsScreen extends StatelessWidget {
          onPressed: () {},
          icon: SvgPicture.asset("assets/icons/heart.svg"),
         ),
-        SizedBox(width: kDefaultPaddin /2)
+        const SizedBox(width: kDefaultPaddin /2)
       ],
     );
   }

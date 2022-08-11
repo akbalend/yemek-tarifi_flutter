@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 class AuthService{
 
@@ -28,6 +27,7 @@ class AuthService{
     try {
       return await _auth.sendPasswordResetEmail(email: email);
     } catch (e) {
+      // ignore: avoid_print
       print(e.toString());
       return null;
     }

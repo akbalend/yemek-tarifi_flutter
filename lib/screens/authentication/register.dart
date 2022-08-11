@@ -4,24 +4,30 @@ import 'package:flutter_yemek_tarifi/screens/authentication/login.dart';
 import 'package:flutter_yemek_tarifi/screens/home/homeScreen.dart';
 import '../../widget.dart';
 
+// ignore: camel_case_types
 class register extends StatefulWidget {
   
- register(void Function() toggleView, {Key? key}) : super(key: key);
+ const register(void Function() toggleView, {Key? key}) : super(key: key);
 
   @override
   State<register> createState() => _registerState();
 }
 
+// ignore: camel_case_types
 class _registerState extends State<register> {
 
   bool isLoading = false;
   
 
+  // ignore: unnecessary_new
   AuthService authService = new AuthService();
 
   final formKey = GlobalKey<FormState>();
+  // ignore: unnecessary_new
   TextEditingController userNameTextEditingController = new TextEditingController();
+  // ignore: unnecessary_new
   TextEditingController emailTextEditingController = new TextEditingController();
+  // ignore: unnecessary_new
   TextEditingController passwordTextEditingController = new TextEditingController();
 
   signUp(){
@@ -46,14 +52,15 @@ class _registerState extends State<register> {
           style: TextStyle(color: Colors.black),
         ),
       ),
+       // ignore: avoid_unnecessary_containers
        body: isLoading ? Container(
-        child: Center(child: CircularProgressIndicator())
+        child: const Center(child: CircularProgressIndicator())
        ) :  SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height - 50,
           alignment: Alignment.bottomCenter,
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 24),
+            padding: const EdgeInsets.symmetric(horizontal: 24),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -96,14 +103,14 @@ class _registerState extends State<register> {
                 Container(
                   alignment: Alignment.centerRight,
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     child: Text(
                       "Şifremi unuttum",
                       style: simpleTextStyle(),
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
                 InkWell(
@@ -117,17 +124,17 @@ class _registerState extends State<register> {
                             return Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => homeScreen(cameras: [],)));
+                                    builder: (context) => const homeScreen(cameras: [],)));
                           });
                         },
                   child: Container(
                     alignment: Alignment.center,
                     width: MediaQuery.of(context).size.width,
-                    padding: EdgeInsets.symmetric(vertical: 20),
+                    padding: const EdgeInsets.symmetric(vertical: 20),
                     decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [
-                          const Color(0xff007EF4),
-                          const Color(0xff2A75BC)
+                        gradient: const LinearGradient(colors: [
+                          Color(0xff007EF4),
+                          Color(0xff2A75BC)
                         ]),
                         borderRadius: BorderRadius.circular(27)),
                     child: Text(
@@ -136,22 +143,22 @@ class _registerState extends State<register> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Container(
                   alignment: Alignment.center,
                   width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.symmetric(vertical: 20),
+                  padding: const EdgeInsets.symmetric(vertical: 20),
                   decoration: BoxDecoration(
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(27)),
-                  child: Text(
+                  child: const Text(
                     "Google ile Bağlan",
                     style: TextStyle(color: Colors.white, fontSize: 17),
                   ),
                 ),
-                SizedBox(height: 16,),
+                const SizedBox(height: 16,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -161,12 +168,12 @@ class _registerState extends State<register> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => logIn(   
+                              builder: (context) => const logIn(   
                               )));
                       },
                       child: Container(
-                        padding: EdgeInsets.symmetric(vertical: 8),
-                        child: Text("Giriş Yap",style: TextStyle(
+                        padding: const EdgeInsets.symmetric(vertical: 8),
+                        child: const Text("Giriş Yap",style: TextStyle(
                           color: Colors.black,
                           fontSize: 17,
                           decoration: TextDecoration.underline
@@ -175,7 +182,7 @@ class _registerState extends State<register> {
                     ),
                   ],
                 ),
-                SizedBox(height: 50,)
+                const SizedBox(height: 50,)
               ],
             ),
           ),

@@ -14,14 +14,14 @@ InputDecoration textFieldInputDecoration(String hintText) {
 }
 
 TextStyle simpleTextStyle(){
-  return TextStyle(
+  return const TextStyle(
     color: Colors.black,
     fontSize: 16
   );
 }
 
 TextStyle mediumTextStyle(){
-  return TextStyle(
+  return const TextStyle(
     color: Colors.black,
     fontSize: 17
   );

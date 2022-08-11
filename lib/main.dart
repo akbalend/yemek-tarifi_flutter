@@ -1,14 +1,15 @@
 import 'package:camera/camera.dart';
-import 'package:camera_platform_interface/src/types/camera_description.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_yemek_tarifi/screens/authentication/authenticate.dart';
-import 'package:flutter_yemek_tarifi/screens/camera/cameraScreen.dart';
 import 'package:flutter_yemek_tarifi/screens/home/homeScreen.dart';
+import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //await Firebase.initializeApp();
+  await Firebase.initializeApp(
+  options: DefaultFirebaseOptions.currentPlatform,
+);
   final cameras = await availableCameras();
   runApp(MyApp(cameras: cameras));
 }
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         systemOverlayStyle: SystemUiOverlayStyle.light,
         elevation: 0,
       )),
-      home: homeScreen(cameras: cameras),
+      home: const Authenticate(),
     );
   }
 }

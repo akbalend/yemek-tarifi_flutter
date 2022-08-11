@@ -44,40 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB29PS6sXlO3pClbARom7vjfXTg5a56dgo',
-    appId: '1:622096366862:web:3cbea328dece102f7ceb5f',
-    messagingSenderId: '622096366862',
-    projectId: 'yemek-tarifi-flutter',
-    authDomain: 'yemek-tarifi-flutter.firebaseapp.com',
-    storageBucket: 'yemek-tarifi-flutter.appspot.com',
-    measurementId: 'G-6C28ZGB32B',
+    apiKey: 'AIzaSyAQTPNE0N_eYjoIU0fVfoLoyBk3nCvBhxo',
+    appId: '1:808833400555:web:ab31a624b1e5776f4748ae',
+    messagingSenderId: '808833400555',
+    projectId: 'yemektarifi-fad39',
+    authDomain: 'yemektarifi-fad39.firebaseapp.com',
+    storageBucket: 'yemektarifi-fad39.appspot.com',
+    measurementId: 'G-2S4N91SGJT',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCe6bLjYhNqE-ljq_kr3CwkA8BilK02ZS0',
-    appId: '1:622096366862:android:7cfe4783aa40e4e17ceb5f',
-    messagingSenderId: '622096366862',
-    projectId: 'yemek-tarifi-flutter',
-    storageBucket: 'yemek-tarifi-flutter.appspot.com',
+    apiKey: 'AIzaSyBvJ9cnD4vt8kGAl8DQ3H8eVEnly6jZ8hc',
+    appId: '1:808833400555:android:6e01c050f2b09db04748ae',
+    messagingSenderId: '808833400555',
+    projectId: 'yemektarifi-fad39',
+    storageBucket: 'yemektarifi-fad39.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDIkf2v9id_4rJzwS47C_s3fXuXUBYKmJg',
-    appId: '1:622096366862:ios:118393dbdc41b95c7ceb5f',
-    messagingSenderId: '622096366862',
-    projectId: 'yemek-tarifi-flutter',
-    storageBucket: 'yemek-tarifi-flutter.appspot.com',
-    iosClientId: '622096366862-tijebtc1m7jf4pjd5hrorodf14g0ikhk.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAIQaFwUCNUj3ZeE6LqLjJW02HR8fxcMdk',
+    appId: '1:808833400555:ios:8dc68d75d035e65c4748ae',
+    messagingSenderId: '808833400555',
+    projectId: 'yemektarifi-fad39',
+    storageBucket: 'yemektarifi-fad39.appspot.com',
+    iosClientId: '808833400555-m02lgh8o11n5p0vbeq8j0e53oh7rfrgb.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterYemekTarifi',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDIkf2v9id_4rJzwS47C_s3fXuXUBYKmJg',
-    appId: '1:622096366862:ios:118393dbdc41b95c7ceb5f',
-    messagingSenderId: '622096366862',
-    projectId: 'yemek-tarifi-flutter',
-    storageBucket: 'yemek-tarifi-flutter.appspot.com',
-    iosClientId: '622096366862-tijebtc1m7jf4pjd5hrorodf14g0ikhk.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAIQaFwUCNUj3ZeE6LqLjJW02HR8fxcMdk',
+    appId: '1:808833400555:ios:8dc68d75d035e65c4748ae',
+    messagingSenderId: '808833400555',
+    projectId: 'yemektarifi-fad39',
+    storageBucket: 'yemektarifi-fad39.appspot.com',
+    iosClientId: '808833400555-m02lgh8o11n5p0vbeq8j0e53oh7rfrgb.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterYemekTarifi',
   );
 }

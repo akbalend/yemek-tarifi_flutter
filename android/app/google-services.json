@@ -1,41 +1,34 @@
 {
   "project_info": {
-    "project_number": "622096366862",
-    "project_id": "yemek-tarifi-flutter",
-    "storage_bucket": "yemek-tarifi-flutter.appspot.com"
+    "project_number": "808833400555",
+    "project_id": "yemektarifi-fad39",
+    "storage_bucket": "yemektarifi-fad39.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:622096366862:android:7cfe4783aa40e4e17ceb5f",
+        "mobilesdk_app_id": "1:808833400555:android:6e01c050f2b09db04748ae",
         "android_client_info": {
           "package_name": "com.example.yemek_tarifi_flutter"
         }
       },
       "oauth_client": [
         {
-          "client_id": "622096366862-a5fbhf24ofqe23u0e1mv7fc6s7vi62mj.apps.googleusercontent.com",
+          "client_id": "808833400555-56ba3mc3broork3p8od639vhv9jog6bh.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCe6bLjYhNqE-ljq_kr3CwkA8BilK02ZS0"
+          "current_key": "AIzaSyBvJ9cnD4vt8kGAl8DQ3H8eVEnly6jZ8hc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "622096366862-a5fbhf24ofqe23u0e1mv7fc6s7vi62mj.apps.googleusercontent.com",
+              "client_id": "808833400555-56ba3mc3broork3p8od639vhv9jog6bh.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "622096366862-tijebtc1m7jf4pjd5hrorodf14g0ikhk.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.flutterYemekTarifi"
-              }
             }
           ]
         }
