@@ -16,6 +16,7 @@ class homeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
+
       body: const Body(),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
@@ -53,7 +54,7 @@ class homeScreen extends StatelessWidget {
               Icons.exit_to_app,
               color: kTextColor,
             )),
-            const SizedBox(width: kDefaultPaddin /2,)
+            const SizedBox(width: kDefaultPaddin /2,),
           ],
       );
   }

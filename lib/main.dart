@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         systemOverlayStyle: SystemUiOverlayStyle.light,
         elevation: 0,
       )),
-      home: const Authenticate(),
+      home: homeScreen(cameras: []),
     );
   }
 }
